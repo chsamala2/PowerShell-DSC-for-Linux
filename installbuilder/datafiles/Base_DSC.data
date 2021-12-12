@@ -230,7 +230,7 @@ ln -fs /opt/microsoft/${{SHORT_NAME}}/bin/OMSConsistencyInvoker $OMI_HOME/bin/OM
 #else
 
 # Make OMI listen on the standard DSC port
-$OMI_HOME/bin/omiconfigeditor httpsport -a 5986 < $CONFIG_SYSCONFDIR/omiserver.conf > $CONFIG_SYSCONFDIR/omiserver.conf_temp
+$OMI_HOME/bin/omiconfigeditor httpsport -a 0 < $CONFIG_SYSCONFDIR/omiserver.conf > $CONFIG_SYSCONFDIR/omiserver.conf_temp
 mv $CONFIG_SYSCONFDIR/omiserver.conf_temp $CONFIG_SYSCONFDIR/omiserver.conf
 
 mkdir -p $OMI_REGISTER_DIR/root-Microsoft-DesiredStateConfiguration
